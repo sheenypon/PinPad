@@ -103,36 +103,7 @@ const ChessNotes = () => {
             </Pressable>
 
             {}
-<Modal
-  visible={menuVisible === item.id}
-  transparent
-  animationType="fade"
-  onRequestClose={() => setMenuVisible(null)}
->
-  <View style={styles.modalOverlay}>
-    <View style={styles.menuContainer}>
-      <TouchableOpacity
-        style={styles.menuItem}
-        onPress={() => {
-          setMenuVisible(null);
-          router.push(/goals/edit/${item.id});
-        }}
-      >
-        <Text style={styles.menuText}>Edit</Text>
-      </TouchableOpacity>
 
-      <TouchableOpacity
-        style={styles.menuItem}
-        onPress={() => {
-          setMenuVisible(null);
-          handleDelete(item.id);
-        }}
-      >
-        <Text style={[styles.menuText, { color: '#f76f7aff' }]}>Delete</Text>
-      </TouchableOpacity>
-    </View>
-  </View>
-</Modal>
           </View>
         )}
         ListEmptyComponent={
